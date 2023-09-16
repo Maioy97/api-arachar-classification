@@ -6,8 +6,8 @@ import numpy as np
 
 
 class LetterClassification:
-    def __init__(self):
-        model_path = "../models/model_weights.h5"
+    def __init__(self, model_path="../models/model_weights.h5"):
+        # model_path =
         self.model = load_model(model_path, compile=False)
         self.input_shape = (64, 64)
         self.class_labels = [
