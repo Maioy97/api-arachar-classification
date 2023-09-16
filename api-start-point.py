@@ -10,8 +10,8 @@ model_path = "./model/..."
 # load model
 
 
-class CharecterClassification(Rescorce):
-    
+class CharacterClassification(Resource):
+
     def get(self):
     # @app.route('/classify_image', methods=['GET'])  # get
     # def classify_image_char():
@@ -39,7 +39,7 @@ class CharecterClassification(Rescorce):
         return response, code
 
 
-api.add_resource(CharecterClassification, '/classify-letter')   # , '/')
+api.add_resource(CharacterClassification, '/classify-letter')   # , '/')
 
 if __name__ == '__main__':
     app.run(debug=True)
