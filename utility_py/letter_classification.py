@@ -48,8 +48,8 @@ class LetterClassification:
         processed_letter_img = self.image_preprocessing(letter_image)
         prediction = self.model(processed_letter_img)
         index = np.argmax(prediction)
-        confidence = prediction[0, index].numpy()
-        result = (self. class_labels[index], confidence)
+        confidence = np.float(prediction[0, index].numpy())
+        result = (self.class_labels[index], confidence)
         return result
 
 
